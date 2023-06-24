@@ -154,7 +154,7 @@ const SinglePost = () => {
                     </div>
                     <div className="comments-details">
                       <div>
-                        {username} .{getPostDate(createdAt)}
+                        @{username} .{getPostDate(createdAt)}
                       </div>
                       <div>{comment}</div>
                       <div>
