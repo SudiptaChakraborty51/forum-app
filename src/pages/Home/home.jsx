@@ -1,13 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./home.css";
 import LeftSideBar from "../../components/LeftSidebar/leftSidebar";
 import { useState } from "react";
 import { sortOptions, getSortedPosts } from "../../utils/sortPosts";
-import { forumData } from "../../data";
 import { useNavigate } from "react-router-dom";
+import { ForumContext } from "../../contexts/forumContext";
+import { getPostDate } from "../../utils/getPostData";
 
 const Home = () => {
-  const [posts, setPosts] = useState(forumData.posts);
+  const {posts, setPosts} = useContext(ForumContext);
 
   const handleUpvote = (postId) => {
     setPosts((prevPosts) =>
@@ -89,11 +90,7 @@ const Home = () => {
                 <div className="post-created-detail">
                   <img src={picUrl} alt={username} width="50" height="50" />
                   <p>Posted by @{username}</p>
-                  <div>·{` ${new Date(createdAt)
-                .toDateString()
-                .split(" ")
-                .slice(1, 4)
-                .join(" ")}`}</div>
+                  <div>·{getPostDate(createdAt)}</div>
                 </div>
                 <div className="post-heading">{post}</div>
                 <div className="post-tags">
