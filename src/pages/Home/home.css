@@ -36,6 +36,10 @@
   margin: 0;
 }
 
+.home-main ul {
+  padding-right: 50px;
+}
+
 .right-sidebar {
   border-left: 1px solid var(--black-color);
   padding: 20px;
