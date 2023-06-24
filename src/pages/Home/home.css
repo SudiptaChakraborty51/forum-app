@@ -1,0 +1,26 @@
+.home {
+  background-color: var(--white-color);
+  color: var(--primary-color);
+}
+
+.home .home-header {
+  padding: 0 2rem;
+  box-shadow: 0 8px 6px -6px var(--grey-color);
+  position: sticky;
+  height: 60px;
+  top: 0;
+  z-index: 10;
+  box-sizing: border-box;
+  background-color: var(--white-color);
+}
+
+.home-main {
+  width: 58%;
+  position: relative;
+  left: 15%;
+  border-radius: 0.75rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: var(--offwhite-color);
+}
